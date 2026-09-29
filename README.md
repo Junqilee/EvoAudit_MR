@@ -8,7 +8,7 @@ The repository contains deterministic compact environments (`AliasTool`, `Switch
 
 The controlled Stage-4 experiments and the independent OOD challenge are implemented. The Qwen proposal pipeline has completed its public schema gate and a sealed online/offline run; the latest Qwen run did not meet the pre-registered candidate-diversity Gate B, so it is recorded as a limitation rather than presented as positive external-validity evidence.
 
-See the Chinese project status and next-step plan in [PROJECT_PROGRESS.md](PROJECT_PROGRESS.md). Research notes and the ICLR source are under [`docs/research/`](docs/research/) and [`paper/`](paper/).
+See the Chinese project status and next-step plan in [PROJECT_PROGRESS.md](PROJECT_PROGRESS.md). Research notes and the ICLR source are under [`docs/research/`](docs/research/) and [`paper/`](paper/). The historical experiment archive is documented in [RESULTS_README.md](RESULTS_README.md).
 
 ## Requirements
 
@@ -75,7 +75,7 @@ python -m evoaudit_mr.runners.ood_challenge --phase online
 python -m evoaudit_mr.runners.ood_challenge --phase offline
 ```
 
-Keep every run in a new output directory. Never overwrite a sealed online/offline record.
+Keep every run in a new output directory. Never overwrite a sealed online/offline record. The completed historical runs are preserved in the compressed archive described in [RESULTS_README.md](RESULTS_README.md); extract it when you need to inspect them.
 
 ## LLM proposal tracks
 
@@ -94,7 +94,7 @@ Validate a public configuration without an API call:
 python -m evoaudit_mr.runners.llm_preflight --config configs/llm_proposal_v1_qwen.json --mode validate
 ```
 
-The Qwen track is phase-locked: public compiler readiness and schema compatibility must pass before proposal generation; each proposal slot is called once; hidden labels are generated only after online artifacts are locked. The repository deliberately excludes `configs/*_offline.json` and all `artifacts_*` directories because they contain private seeds, hidden labels, or generated records.
+The Qwen track is phase-locked: public compiler readiness and schema compatibility must pass before proposal generation; each proposal slot is called once; hidden labels are generated only after online artifacts are locked. Historical `artifacts_*` outputs are preserved in `archives/experiment_artifacts_2026-09-29.tar.gz`; extract them locally when needed. `configs/*_offline.json` remains excluded because it contains private hidden-evaluator seeds. Read [RESULTS_README.md](RESULTS_README.md) before using an artifact in a new experiment.
 
 ## Repository layout
 
@@ -107,11 +107,13 @@ PROJECT_PROGRESS.md    Chinese project status, conclusions, and next steps
 requirements.txt       Reproducible installation entry point
 docs/research/         Literature notes, stage plans, and implementation records
 paper/                 ICLR 2027 LaTeX/BibTeX source (no build outputs)
+archives/               Lossless archive of historical experiment outputs
+artifacts_*/            Local extracted outputs (ignored by Git)
 ```
 
 ## Reproducibility and data boundaries
 
-Online evaluation sees only public tasks and candidate context. Offline evaluators use HMAC-committed private configuration and are run after phase locks. Generated artifacts are local by design; this prevents accidentally publishing API responses, hidden seeds, or test labels. To share a result, export a redacted summary or add a deliberately curated report under version control rather than committing an entire artifact directory.
+Online evaluation sees only public tasks and candidate context. Offline evaluators use HMAC-committed private configuration and are run after phase locks. The historical artifact archive is tracked separately from source code; API keys and offline seed configurations remain excluded. See [RESULTS_README.md](RESULTS_README.md) for the checksum, extraction command, artifact provenance, and reproduction rules.
 
 ## License and research use
 

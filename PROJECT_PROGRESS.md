@@ -69,6 +69,6 @@ python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
 ```
 
-如需调用 Qwen 或 DeepSeek，先在本机配置环境变量；不要把 API key 写入配置文件或提交到 GitHub。实验生成目录被 `.gitignore` 排除，需要时按 README 中的命令重新生成。
+如需调用 Qwen 或 DeepSeek，先在本机配置环境变量；不要把 API key 写入配置文件或提交到 GitHub。历史实验产物已保存为 `archives/experiment_artifacts_2026-09-29.tar.gz`，并通过 `RESULTS_README.md` 提供 SHA-256、解压命令、用途、统计单位和数据边界。解压后会得到各个 `artifacts_*` 目录；这些目录被 Git 忽略，以避免误提交。新的实验必须使用新的输出目录，不覆盖历史封存结果。`configs/*_offline.json` 仍不提交，因为其中包含 hidden evaluator seed。
 
 研究笔记已整理到 `docs/research/`，ICLR 论文源文件已整理到 `paper/`。论文目录只保留可继续编辑的 `.tex`、`.bib`、`.sty` 和 `.bst` 文件；PDF、日志和辅助编译文件需要在本机重新生成。

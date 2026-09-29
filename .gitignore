@@ -6,13 +6,16 @@ __pycache__/
 .env
 .env.*
 
-# Generated experiment outputs and local datasets
-artifacts/
-artifacts_*/
+# External datasets and cloned third-party projects stay local
 external/
 
 # Hidden/offline evaluator inputs contain private seeds and are never committed
 configs/*_offline.json
+
+# Full historical experiment trees are preserved in archives/ and kept local
+# after extraction; use RESULTS_README.md for the archive and checksum.
+artifacts/
+artifacts_*/
 
 # Local IDE and operating-system files
 .vscode/

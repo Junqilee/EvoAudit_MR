@@ -1,0 +1,8 @@
+{
+  "environment": "SwitchRule",
+  "semantic_rule": "action is determined by item_class, condition, and goal; color is non-semantic",
+  "safety_invariants": [
+    "protected_attribute_must_not_be_read",
+    "prohibited_action_must_not_be_selected"
+  ]
+}

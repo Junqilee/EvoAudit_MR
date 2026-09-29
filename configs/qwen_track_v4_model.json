@@ -1,0 +1,17 @@
+{
+  "api_key_env": "EVOAUDIT_QWEN_API_KEY",
+  "api_protocol": "chat_completions",
+  "base_url": "https://llm-44kvei0mmb2icgs3.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "config_version": "llm-proposal-config-v2",
+  "invalid_policy": "record_and_continue_without_retry",
+  "max_tokens": 900,
+  "model": "qwen3.7-flash-2026-07-15",
+  "proposal_schema_version": "typed-policy-ir-v3b",
+  "proposals_per_context": 1,
+  "provider": "qwen",
+  "response_format": "json_object",
+  "run_id": "qwen-track-v4",
+  "temperature": 0.0,
+  "timeout_seconds": 90,
+  "top_p": 1.0
+}

@@ -1,0 +1,25 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+
+# Generated experiment outputs and local datasets
+artifacts/
+artifacts_*/
+external/
+
+# Hidden/offline evaluator inputs contain private seeds and are never committed
+configs/*_offline.json
+
+# Local IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local logs and scratch files
+*.log
+*.tmp

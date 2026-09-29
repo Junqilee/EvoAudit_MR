@@ -1,0 +1,3 @@
+# EvoAudit-MR has no third-party runtime dependency.
+# This installs the package in editable mode for local development and tests.
+-e .

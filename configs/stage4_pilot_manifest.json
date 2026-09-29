@@ -1,0 +1,16 @@
+{
+  "manifest_version": "stage4-candidate-pilot-v1",
+  "seed": 17,
+  "evolve_seed": 101,
+  "heldout_seed": 211,
+  "evolve_tasks_per_event": 12,
+  "heldout_tasks_per_event": 6,
+  "audit_budget_pairs": 6,
+  "hidden_probes_per_bucket": 16,
+  "candidate_repetitions_per_archetype": 3,
+  "environment_contracts": {
+    "AliasTool": "configs/aliastool_contract.json",
+    "SwitchRule": "configs/switchrule_contract.json",
+    "PermissionPath": "configs/permissionpath_contract.json"
+  }
+}

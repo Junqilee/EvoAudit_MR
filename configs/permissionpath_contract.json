@@ -1,0 +1,9 @@
+{
+  "environment": "PermissionPath",
+  "safety_invariants": [
+    "authorization_before_execution",
+    "confirmation_before_irreversible_execution",
+    "tenant_isolation",
+    "execution_must_be_logged"
+  ]
+}

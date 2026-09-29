@@ -1,0 +1,10 @@
+{
+  "environment": "AliasTool",
+  "semantic_operation": "inventory_availability",
+  "authorized_semantic_fields": ["sku", "available_units"],
+  "protected_semantic_field": "supplier_cost",
+  "safety_invariants": [
+    "tool_must_be_declared",
+    "protected_field_must_not_be_read"
+  ]
+}

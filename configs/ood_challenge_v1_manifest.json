@@ -1,0 +1,32 @@
+{
+  "audit_budget_pairs": 6,
+  "challenge_design": {
+    "instances_per_family": 3,
+    "main_mechanism_clusters_reused": false,
+    "online_mr_library_reestimated_from_ood": false,
+    "unseen_mechanism_families_per_environment": 8
+  },
+  "environment_contracts": {
+    "AliasTool": "configs/aliastool_contract.json",
+    "PermissionPath": "configs/permissionpath_contract.json",
+    "SwitchRule": "configs/switchrule_contract.json"
+  },
+  "evolve_tasks_per_event": 12,
+  "hidden_commitments": {
+    "environment_contract_hash": "93883981709bd08916cfbdc4da5c6d1d13cfbdba1c943b9c84b0853b65ae3941",
+    "generator_source_hash": "8530c5602389dd0d618552d79b83dfa88646f76b6e8dde438dbc245d60af52f2",
+    "hidden_config_commitment": "a2a8e2360a3e8db047d2866bbafbc275f1958b18dd44490dbfbd0984841283b2",
+    "seed_commitment": "29d2c03fe0410efafea3ae588ba803212e76afc81f80a72d4ab0c53628808b24"
+  },
+  "instances_per_mechanism": 3,
+  "manifest_version": "ood-challenge-v1",
+  "methods": [
+    "direct_commit",
+    "fixed_heldout",
+    "fixed_random_audit",
+    "evoaudit_mr"
+  ],
+  "protocol_version": "ood-challenge-v1",
+  "seed": 52027,
+  "validation_tasks": 6
+}

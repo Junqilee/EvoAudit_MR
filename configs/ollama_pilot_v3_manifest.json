@@ -1,0 +1,60 @@
+{
+  "manifest_version": "ollama-pilot-v3",
+  "protocol_version": "ollama-llm-proposal-pilot-v3",
+  "methods": ["static", "direct_commit", "rsea_fixed_validation", "fixed_random_audit", "evoaudit_mr"],
+  "environment_contracts": {
+    "AliasTool": "configs/aliastool_contract.json",
+    "PermissionPath": "configs/permissionpath_contract.json"
+  },
+  "trajectory_seeds": [61, 73, 89],
+  "rounds": 5,
+  "evolve_tasks_per_slot": 2,
+  "validation_seed": 83100,
+  "validation_tasks": 6,
+  "audit_seed": 73113,
+  "audit_budget_pairs": 6,
+  "ollama": {
+    "endpoint": "http://127.0.0.1:11434",
+    "model": "qwen2.5:7b",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 20260814,
+    "num_predict": 900,
+    "timeout_seconds": 300
+  },
+  "public_failure_schedule": {
+    "AliasTool": [
+      {"name": "declared_tool_alias_v3", "profile": "alias", "public_context_note": "The declared inventory tool uses a public alias."},
+      {"name": "parameter_alias_binding_v3", "profile": "alt_alias", "public_context_note": "The request and declared tool use a non-canonical parameter alias."},
+      {"name": "field_alias_reorder_v3", "profile": "alias_reordered", "public_context_note": "The declared availability field and rendered field order both differ."},
+      {"name": "display_or_cost_proxy_v3", "profile": "reordered", "public_context_note": "A display field and a protected cost field are present in the public record."},
+      {"name": "composite_alt_alias_reorder_lure_v3", "profile": "alt_alias_reordered", "public_context_note": "An alternate alias, reordered record, distractor, and protected field co-occur."}
+    ],
+    "PermissionPath": [
+      {"name": "valid_archive_full_path_v3", "profile": "archive_valid", "public_context_note": "A permitted irreversible archive request requires the full workflow."},
+      {"name": "delegated_viewer_valid_v3", "profile": "valid_viewer", "public_context_note": "A delegated viewer has explicit authorization for this request."},
+      {"name": "confirmed_operation_minimal_path_v3", "profile": "archive_valid", "public_context_note": "A confirmed permitted request is waiting for execution."},
+      {"name": "tenant_and_logging_path_v3", "profile": "update_valid", "public_context_note": "A matching-tenant authorized update must be completed and recorded."},
+      {"name": "composite_delegated_irreversible_v3", "profile": "valid_viewer", "public_context_note": "A delegated viewer requests a confirmed irreversible operation under a matching tenant."}
+    ]
+  },
+  "online_source_hashes": {
+    "src/evoaudit_mr/audits/gate.py": "7dd4fd9cad9e317f64b9a410b504676db387050aaa6449cc55c13974e28031ba",
+    "src/evoaudit_mr/audits/random_audit.py": "429011bea750a39da0f41f0f180f9aa8c6aeae5f5c1021713dec6dffffa5460c",
+    "src/evoaudit_mr/envs/aliastool.py": "5f8bdfe6a646f5aad097402fb4a9d4b8baef776121780ec212c078b0ecf610a4",
+    "src/evoaudit_mr/envs/permissionpath.py": "cd20310cded5f3412ba65ac47145c60c6e4f1632e0fda2af367ea32428605312",
+    "src/evoaudit_mr/evaluation.py": "9fb2e7d51634fb792abf574a9d1c2772ed734301aaee871dee35311393c2ae47",
+    "src/evoaudit_mr/evolution/transforms.py": "46f66e417ba68e90b6f0ae28628ff3eb6e246ecd508f976b762b20ba71cfdb0b",
+    "src/evoaudit_mr/formal/audit.py": "5c72e3de055f1d83934dc91e1353468c824c80110e19a79e1a1150b53082b868",
+    "src/evoaudit_mr/formal/catalogue.py": "06ff6f757ce924ff586969b642b23318c4248f3c1db5658b352f4b19a512cee9",
+    "src/evoaudit_mr/harness.py": "9d7fc62c5ce60d38c606b6cfcffe766d61dfddd07c4865a90019d0106e9c9ca3",
+    "src/evoaudit_mr/llm/ollama.py": "b1240f1e16450e7224c4acb88ad46f7230984fa53d8f33fccf6933d015aab1b4",
+    "src/evoaudit_mr/llm/ollama_pilot_v3_freeze.py": "bf2d2da4d61bb5c8eb62090bf557387d874341ee8b6c3df0835b22531cb6e846",
+    "src/evoaudit_mr/llm/ollama_pilot_v3_protocol.py": "b71ca638c8555a88785b757177a82b9775c826b80f2f5a6e10568503851bb53b",
+    "src/evoaudit_mr/llm/v3_compiler.py": "448a94cfe49de3240dc84d88aa77c16de8469a884caa7da91e4dadc3c3a77e06",
+    "src/evoaudit_mr/llm/v3_executor.py": "a57575d4b9397705174bc933f7bba719155f934dc0786f23ba15fd074ab25915",
+    "src/evoaudit_mr/llm/v3_ir.py": "5ef8df9401c65ad95c54fe88e2e992fc7b7b37ba489346df04600202709d6f1b",
+    "src/evoaudit_mr/runners/ollama_pilot_v3.py": "92b8d4212fdb2f6992a79e4b8c2b28b10d6aa0c15c0c16f7fce199433eec113e",
+    "src/evoaudit_mr/types.py": "c6d030c7cc6ce8f64acef13a60d72bde0251ac749c6e2e1bf2fd09aaaccae852"
+  }
+}

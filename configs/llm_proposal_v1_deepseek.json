@@ -1,0 +1,17 @@
+{
+  "api_key_env": "EVOAUDIT_DEEPSEEK_API_KEY",
+  "base_url": "https://api.deepseek.com",
+  "config_version": "llm-proposal-config-v2",
+  "invalid_policy": "record_and_continue_without_retry",
+  "max_tokens": 900,
+  "model": "deepseek-v4-flash",
+  "proposal_schema_version": "llm-patch-dsl-v1",
+  "proposals_per_context": 1,
+  "provider": "deepseek",
+  "api_protocol": "chat_completions",
+  "response_format": "json_object",
+  "run_id": "llm-proposal-deepseek-v1",
+  "temperature": 0.0,
+  "timeout_seconds": 90,
+  "top_p": 1.0
+}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": "stage3-prototype-v1",
+  "seed": 0,
+  "evolve_seed": 11,
+  "heldout_seed": 29,
+  "base_distribution": {
+    "profiles": ["canonical", "alias", "reordered", "alias_reordered"]
+  },
+  "evolve_tasks_per_event": 8,
+  "heldout_tasks_per_event": 6,
+  "audit_budget_pairs": 6,
+  "hidden_probes_per_bucket": 8,
+  "candidate_specs": "configs/prototype_candidates.json",
+  "environment_contract": "configs/aliastool_contract.json"
+}

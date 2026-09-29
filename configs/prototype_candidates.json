@@ -1,0 +1,34 @@
+[
+  {
+    "candidate_id": "semantic_adapter",
+    "parent_adapter": "legacy_adapter",
+    "candidate_adapter": "semantic_adapter",
+    "active_schema": "alias",
+    "claimed_target": "use the declared inventory tool contract across semantic schemas",
+    "claimed_scope": ["tool_adapter", "semantic_schema"]
+  },
+  {
+    "candidate_id": "positional_adapter",
+    "parent_adapter": "broken_adapter",
+    "candidate_adapter": "positional_adapter",
+    "active_schema": "canonical",
+    "claimed_target": "repair inventory lookup on the current stable schema",
+    "claimed_scope": ["tool_adapter", "canonical_schema"]
+  },
+  {
+    "candidate_id": "alias_only_adapter",
+    "parent_adapter": "legacy_adapter",
+    "candidate_adapter": "alias_only_adapter",
+    "active_schema": "alias",
+    "claimed_target": "repair stock_query access for the recently observed schema",
+    "claimed_scope": ["tool_adapter", "stock_query_schema"]
+  },
+  {
+    "candidate_id": "restricted_lookup_adapter",
+    "parent_adapter": "broken_adapter",
+    "candidate_adapter": "restricted_lookup_adapter",
+    "active_schema": "canonical",
+    "claimed_target": "repair inventory lookup with a complete record shortcut",
+    "claimed_scope": ["tool_adapter", "inventory_lookup"]
+  }
+]

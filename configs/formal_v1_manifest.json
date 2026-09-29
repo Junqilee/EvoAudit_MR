@@ -1,0 +1,29 @@
+{
+  "analysis_seed_count": 1000,
+  "analysis_seed_start": 1000,
+  "audit_budget_pairs": 6,
+  "environment_contracts": {
+    "AliasTool": "configs/aliastool_contract.json",
+    "PermissionPath": "configs/permissionpath_contract.json",
+    "SwitchRule": "configs/switchrule_contract.json"
+  },
+  "evolve_tasks_per_event": 12,
+  "hidden_commitments": {
+    "environment_contract_hash": "93883981709bd08916cfbdc4da5c6d1d13cfbdba1c943b9c84b0853b65ae3941",
+    "factor_split_commitment": "43b73481e36cef5e1b8511e934fdb4848bf27fc9267f3ff27007b35c887730c1",
+    "generator_source_hash": "7a42046428beaa262a04448d79d7e646260e0029d2fa07aa16a406835a6e56a3",
+    "hidden_config_commitment": "b516546255e9fa88a5ca308372ca6c348e2dd3788eeeadc23adf161e4a222edb",
+    "seed_commitment": "24721501c5ddd9aa04ef295284b99944e79cd2acfeb40a844b59ce13566b7a07"
+  },
+  "instances_per_mechanism": 6,
+  "manifest_version": "formal-candidate-v1",
+  "methods": [
+    "direct_commit",
+    "fixed_heldout",
+    "fixed_random_audit",
+    "evoaudit_mr"
+  ],
+  "protocol_version": "formal-v1",
+  "seed": 2027,
+  "validation_tasks": 6
+}

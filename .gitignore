@@ -23,3 +23,12 @@ Thumbs.db
 # Local logs and scratch files
 *.log
 *.tmp
+
+# ICLR paper build outputs (source files remain tracked)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk

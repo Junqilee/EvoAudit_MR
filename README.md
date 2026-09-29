@@ -8,7 +8,7 @@ The repository contains deterministic compact environments (`AliasTool`, `Switch
 
 The controlled Stage-4 experiments and the independent OOD challenge are implemented. The Qwen proposal pipeline has completed its public schema gate and a sealed online/offline run; the latest Qwen run did not meet the pre-registered candidate-diversity Gate B, so it is recorded as a limitation rather than presented as positive external-validity evidence.
 
-See the Chinese project status and next-step plan in [PROJECT_PROGRESS.md](PROJECT_PROGRESS.md).
+See the Chinese project status and next-step plan in [PROJECT_PROGRESS.md](PROJECT_PROGRESS.md). Research notes and the ICLR source are under [`docs/research/`](docs/research/) and [`paper/`](paper/).
 
 ## Requirements
 
@@ -105,6 +105,8 @@ configs/               Public manifests and model configuration templates
 scripts/               PowerShell setup and long-running-track helpers
 PROJECT_PROGRESS.md    Chinese project status, conclusions, and next steps
 requirements.txt       Reproducible installation entry point
+docs/research/         Literature notes, stage plans, and implementation records
+paper/                 ICLR 2027 LaTeX/BibTeX source (no build outputs)
 ```
 
 ## Reproducibility and data boundaries

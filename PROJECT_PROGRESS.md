@@ -70,3 +70,5 @@ python -m unittest discover -s tests -v
 ```
 
 如需调用 Qwen 或 DeepSeek，先在本机配置环境变量；不要把 API key 写入配置文件或提交到 GitHub。实验生成目录被 `.gitignore` 排除，需要时按 README 中的命令重新生成。
+
+研究笔记已整理到 `docs/research/`，ICLR 论文源文件已整理到 `paper/`。论文目录只保留可继续编辑的 `.tex`、`.bib`、`.sty` 和 `.bst` 文件；PDF、日志和辅助编译文件需要在本机重新生成。
